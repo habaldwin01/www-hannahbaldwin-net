@@ -48,9 +48,9 @@ def markdown_page(path):
 
     return render_template("blog_page.html", markdown=md_template)
 
-@blogumentation_pages.route("/blog", defaults={'path': 'index'}, methods=['GET'])
-@blogumentation_pages.route("/blog/", defaults={'path': 'index'}, methods=['GET'])
-@blogumentation_pages.route("/blog/<path:path>", methods=['GET'])
+@site_pages.route("/blog", defaults={'path': 'index'}, methods=['GET'])
+@site_pages.route("/blog/", defaults={'path': 'index'}, methods=['GET'])
+@site_pages.route("/blog/<path:path>", methods=['GET'])
 def blogs_index(path):
     return markdown_page(path)
 
