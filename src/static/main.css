@@ -1,0 +1,194 @@
+@font-face {
+    font-family: "LT Superior";
+    src: url("/static/fonts/ttf/lt-superior/LTSuperior-Medium.ttf") format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "LT Superior";
+    src: url("/static/fonts/ttf/lt-superior/LTSuperior-Bold.ttf") format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "LT Superior";
+    src: url("/static/fonts/ttf/lt-superior/LTSuperior-MediumItalic.ttf") format('truetype');
+    font-weight: normal;
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: "LT Superior";
+    src: url("/static/fonts/ttf/lt-superior/LTSuperior-BoldItalic.ttf") format('truetype');
+    font-weight: bold;
+    font-style: oblique;
+}
+
+:root {
+    --std-color-a: #513b33;
+    --std-color-bg-a: #f5ede4;
+    --std-color-bg-b: #cebeaa;
+    --error-color-a: #ff2200;
+}
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width:100vw;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 1rem;
+    font-family: "LT Superior", serif;
+    color: var(--std-color-a);
+    background-color: var(--std-color-bg-a);
+}
+
+.no-bkg-standard-content, .standard-content, nav, main, footer {
+    padding: 0.75rem 1rem 0.5rem 1rem; /* top right bottom left */
+    margin: auto;
+}
+
+.no-padding-content {
+    padding: 0;
+    margin: auto;
+}
+    
+.standard-content, .no-padding-content, nav, main, footer {
+    background-color: var(--std-color-bg-a);
+    box-sizing: border-box;
+}
+
+.no-padding-content, .no-bkg-standard-content, .standard-content, nav, main, footer {
+    border-color: var(--std-color-bg-b);
+    border-style: none none solid none;
+    border-width: 1px;
+}
+@media all and (min-width: 240mm) {
+    .no-padding-content, .no-bkg-standard-content, .standard-content, main, footer {
+        width: 200mm;
+        border-style: none solid solid solid;
+    }
+    nav {
+        margin-top: 10mm;
+        width: 200mm;
+        border-style: solid solid solid solid;
+    }
+}
+
+.pixelart {
+    image-rendering: pixelated;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    font-family: "LT Superior";
+}
+h1 {
+    font-size: 2.5rem;
+    margin: 0.05em 0 0 0;
+}
+h2, h3 {
+    margin: 0.35em 0 0 0;
+}
+h2 {
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1.25rem;
+}
+
+
+p, a, span, ul, dl {
+    color: inherit;
+    margin: 0;
+}
+
+ul, ol {
+    padding: 0 0 0 1em;
+}
+ul {
+    list-style-type: none;
+}
+ol {
+    list-style-type: lower-roman;
+}
+li::before {
+     content: ">";
+     position: relative;
+     font-size: 0.75em;
+     font-weight: bold;
+     right: 0.25em;
+}
+
+.thumbnail {
+    height: 100px;
+}
+
+nav, footer {
+    color: var(--std-color-a);
+    background-color: var(--std-color-bg-a);
+}
+
+a {
+    cursor: pointer;
+}
+
+.markdown-container > * > img {
+    width: 100mm;
+    max-width: 100%;
+}
+
+.imglink {
+    display: inline-block;
+    padding: 0;
+    line-height: 0em;
+}
+
+.imglink > img {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+/*a:hover {
+    outline-style: solid;
+    outline-width: 0.15rem;
+    outline-offset: 1px;
+    outline-color: var(--std-color-bg-b);
+}*/
+
+a:hover {
+    outline-style: solid;
+    outline-width: 1px;
+    outline-offset: 0.1em;
+    outline-color: var(--std-color-bg-b);
+}
+
+a:focus {
+    outline-style: solid;
+    outline-width: 0.15rem;
+    outline-offset: 1px;
+    outline-color: var(--std-color-a);
+}
+
+.ws-text {
+    font-family: "LT Superior";
+    font-weight: normal;
+    font-size: 1rem;
+    opacity: 0.25;
+    text-decoration: none;
+}
+
+nav {
+    overflow: hidden;
+}
+
+.inline-text-list {
+    vertical-align: middle;
+}
+
+.inline-text-list > * {
+    margin-right: 1em;
+}
+

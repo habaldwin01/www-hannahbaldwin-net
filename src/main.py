@@ -10,11 +10,11 @@ app.register_blueprint(site_pages)
 
 @app.errorhandler(404)
 def not_found_error_handler(e):
-    return render_template("404.html")
+    return render_template("404.jinja.html")
 
 @app.route("/")
 def home_screen():
-    return render_template("index.html")
+    return render_template("index.jinja.html")
 
 if __name__ == "__main__":
     app.run()
